@@ -41,7 +41,7 @@ async def update_cache(cache: Cache):
 
 # corutine
 async def clean_up(cache: Cache):
-    for _ in range(5):
+    while True:
         cache.clean_up()
         await asyncio.sleep(1)
 
